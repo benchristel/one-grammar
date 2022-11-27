@@ -4,11 +4,20 @@
 
 OGTRTA recognizes two main parts of speech: the noun and the predicate. The relationships formed by these two parts of speech create most of the syntactic structure of the language.
 
-## Nouns
+OGTRTA embodies a key insight into the nature of language: that syntactic relationships among words can be viewed as purely structural and devoid of inherent meaning. Meaning is "layered onto" the syntax by the lexicon. The lexical structure of a language depends on the syntactic structure—not the other way around.
+
+As an example of how this works, consider a couple of English sentences:
+
+- _He did it for their sake_
+- _She headed in the direction of the tower_
+
+Here, the words "sake" and "direction" don't refer to physical entities. Their role in the sentence is to impart a specific meaning to the syntactical relationships among verb, preposition, and now.
+
+### Nouns
 
 Nouns are more or less like nouns in English: they refer to people, places, and things, but also to abstractions and nominalized actions (like "chewing") that are being discussed as if they were things.
 
-## Predicates
+### Predicates
 
 Predicates play the roles that verbs, adjectives, adverbs, and prepositions do in English. A predicate describes a noun or another predicate (its _subject_) and has zero or more slots for _complement_ nouns. The roles that the complements play in relation to the predicate are lexically determined by the predicate.
 
@@ -18,7 +27,7 @@ You can think of P0s as adjectives or intransitive verbs, P1s as prepositions or
 
 Every predicate is the head of a _predicate phrase_ (denoted PP in the syntax) and its complements are also part of the predicate phrase. The subject of a predicate is not part of the predicate phrase.
 
-## Other Parts of Speech
+### Other Parts of Speech
 
 - noun conjunctions
 - predicate conjunctions
@@ -27,11 +36,11 @@ Every predicate is the head of a _predicate phrase_ (denoted PP in the syntax) a
 - sentence-level particles (e.g. the TAM and SUB particles below)
 - pronouns (which generally behave like nouns, but may have different inflectional patterns).
 
-## Post-serialization transformations
+### Post-serialization transformations
 
 Languages may define rules that act on combinations of morphemes after the syntax arranges them into a series. For example, languages might have contractions, or phonologically conditioned consonant mutations.
 
-## Syntax
+### Syntax
 
 The syntax of OGTRTA is really two syntaxes in one, since it is completely reversible. The word order presented below is head-initial, VOS, but if you reverse each of the expansions in the syntax rules listed below, you get the head-final, SOV version of the grammar.
 
@@ -47,7 +56,7 @@ A B    = A followed by B
 (...)  = grouping
 ```
 
-### Noun Phrases
+#### Noun Phrases
 
 A noun phrase may consist of a head noun optionally preceded by a determiner, and followed by any number of modifiers, which are predicate phrases.
 
@@ -71,7 +80,7 @@ Semantically, the head noun is the subject of those P0s.
 NP -> (DET P0*)? N PP*
 ```
 
-### Predicate Phrases
+#### Predicate Phrases
 
 A predicate phrase may consist of a predicate with valence N, followed by any number of modifying predicate phrases and then N complements.
 
@@ -91,7 +100,7 @@ Optional extension: predicate modifiers may be allowed after the complements:
 PP -> Pn PP* NP{n} PP*
 ```
 
-### Sentences
+#### Sentences
 
 A sentence consists of a tense/aspect/mood particle, a predicate phrase, and a subject. (This section of the grammar is still being researched, and is likely to change.)
 
@@ -123,7 +132,7 @@ Finally, sentences can become subordinate clauses that behave like noun phrases:
 NP -> SUB S
 ```
 
-## Morphology
+### Morphology
 
 OGTRTA languages show some diversity of morphology, but there are a few common patterns:
 
@@ -132,7 +141,7 @@ OGTRTA languages show some diversity of morphology, but there are a few common p
 - There are always affixes for changing the valence of verbs, and for passivization.
 - There may be noun classes/genders, with which predicates agree.
 
-## Idioms
+### Idioms
 
 The syntax says that a predicate's modifiers have to immediately follow it. However, they can be moved to the end of the sentence if we conjoin an anaphoric predicate that the modifiers can attach to.
 
