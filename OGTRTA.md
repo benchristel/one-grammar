@@ -11,7 +11,7 @@ As an example of how this works, consider a couple of English sentences:
 - _He did it for their sake_
 - _She headed in the direction of the tower_
 
-Here, the words "sake" and "direction" don't refer to physical entities. Their role in the sentence is to impart a specific meaning to the syntactical relationships among verb, preposition, and now.
+Here, the words "sake" and "direction" don't refer to physical entities. Their role in the sentence is to impart a specific meaning to the syntactical relationships among verb, preposition, and noun.
 
 ### Nouns
 
